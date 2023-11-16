@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvc45fntaxv3y"]
+
+[ext_resource type="PackedScene" uid="uid://c3kucf1bsb0yf" path="res://sa.tscn" id="2_qbsye"]
+[ext_resource type="Script" path="res://Player.gd" id="3_ww2ad"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_25lcn"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_i6h6f"]
+sky_material = SubResource("ProceduralSkyMaterial_25lcn")
+
+[sub_resource type="Environment" id="Environment_1wsr6"]
+background_mode = 2
+sky = SubResource("Sky_i6h6f")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qvflm"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1wsr6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.709897, 0.697649, -0.0966023, -0.510896, 0.604498, 0.611202, 0.4848, -0.384537, 0.785557, 4.07132, 4.80414, -1.85508)
+shadow_enabled = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5, 4.37114e-07, 2.18557e-07, -2.18557e-07, 9.55343e-15, -5, -4.37114e-07, -5, 9.55343e-15, 1.11005, 6.87432, 3.81317)
+mesh = SubResource("PlaneMesh_qvflm")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-07, 5, -2.18557e-07, 0, -2.18557e-07, -5, -5, -2.18557e-07, 9.55343e-15, -3.81948, 6.91371, -1.1757)
+mesh = SubResource("PlaneMesh_qvflm")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00872649, -4.99999, -4.37114e-07, -4.99999, 0.00872649, 0, 7.62894e-10, 4.37113e-07, -5, 6.14758, 6.42796, -0.997978)
+mesh = SubResource("PlaneMesh_qvflm")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.99998, 0, -0.0130899, 0, 5, 0, 0.0130899, 0, 4.99998, 1.09099, 1.88124, -1.20404)
+mesh = SubResource("PlaneMesh_qvflm")
+skeleton = NodePath("")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1.3766, -2.03727e-10, 9.31323e-10, 0, 1.35387, -0.249117, -9.31323e-10, 0.249117, 1.35387, 0.640834, 2.58765, -0.675614)
+script = ExtResource("3_ww2ad")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-0.726386, -1.33179e-09, 0.00788601, 9.82699e-05, 0.726373, 0.00905184, -0.00788539, 0.0090524, -0.72633, 0.00111106, 0.730211, -0.0953386)
+
+[node name="Head" parent="Player/Camera3D" instance=ExtResource("2_qbsye")]
+transform = Transform3D(-1.37652, 0.00455593, -0.0142327, -2.56411e-09, 1.31107, 0.419676, 0.0149441, 0.419651, -1.31099, -0.00163579, -0.702794, -0.291565)

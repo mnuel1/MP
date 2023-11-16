@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3kucf1bsb0yf"]
+
+[ext_resource type="PackedScene" uid="uid://c8yi0hvnqngfu" path="res://assets/uploads_files_1827373_Arm_format1.blend" id="1_ud707"]
+
+[node name="uploads_files_1827373_Arm_format1" instance=ExtResource("1_ud707")]
+
+[node name="Skeleton3D" parent="skeleton" index="0"]
+bones/0/rotation = Quaternion(0.094475, -0.120525, -1.26953, 0.435475)
+bones/1/rotation = Quaternion(0.770475, -0.000525026, 0.00847497, 0.986475)
+bones/22/rotation = Quaternion(0.029475, 0.094475, 1.17448, 0.435475)
+bones/23/rotation = Quaternion(0.770475, -0.000525026, 0.00847497, 0.986475)
+
+[node name="sculpt" parent="." index="1"]
+visible = false
+
+[node name="Camera" parent="." index="2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.589388, -0.0844604)
+visible = false
+
+[node name="pistol" parent="." index="3"]
+visible = false
+
+[node name="knife" parent="." index="4"]
+visible = false
