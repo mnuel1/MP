@@ -1,2 +1,2 @@
 Decision Theory
-Matching Pennies with nash equilibrium 
+Stepping Pennies with nash equilibrium 
