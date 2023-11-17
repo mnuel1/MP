@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://iei25rdnhp4a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_88o17"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owi3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i0c0b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u184u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yebux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ma1eb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6hnl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pofoh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqvqp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eljmy"]
+
+[node name="Menu" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 76
+text = "MATCHING PENNIES"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 56
+
+[node name="FlowContainer" type="FlowContainer" parent="Control/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 50
+alignment = 1
+
+[node name="Start" type="Button" parent="Control/MarginContainer/VBoxContainer/MarginContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_88o17")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_owi3o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_i0c0b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u184u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yebux")
+text = "S T A R T"
+
+[node name="Quit" type="Button" parent="Control/MarginContainer/VBoxContainer/MarginContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ma1eb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g6hnl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pofoh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dqvqp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eljmy")
+text = "Q U I T"
